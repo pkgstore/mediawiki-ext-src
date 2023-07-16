@@ -1,0 +1,10 @@
+{
+  "@metadata": {
+    "authors": [
+      "iHub TO"
+    ]
+  },
+  "mw-src-desc": "Подсветка синтаксиса исходного кода на основе библиотеки [http://prismjs.com/ Prism.JS].",
+  "mw-src-error-category": "META:ERROR.EXT.Src",
+  "mw-src-block-title": "Код"
+}

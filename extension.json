@@ -1,0 +1,63 @@
+{
+  "name": "MW_EXT_Src",
+  "version": "2.0.0",
+  "author": [
+    "[https://ihub.to/ iHub TO]",
+    "[https://kitsune.solar/ Kitsune Solar]",
+    "..."
+  ],
+  "url": "https://ihub.to/",
+  "descriptionmsg": "mw-src-desc",
+  "license-name": "[https://choosealicense.com/licenses/mit/ MIT]",
+  "type": "parserhook",
+  "require": {
+    "MediaWiki": ">= 1.31.0",
+    "extensions": {
+      "MW_EXT_Kernel": "*"
+    }
+  },
+  "AutoloadClasses": {
+    "MediaWiki\\Extension\\PkgStore\\MW_EXT_Src": "MW_EXT_Src.class.php"
+  },
+  "Hooks": {
+    "ParserFirstCallInit": [
+      "MediaWiki\\Extension\\PkgStore\\MW_EXT_Src::onParserFirstCallInit"
+    ],
+    "BeforePageDisplay": [
+      "MediaWiki\\Extension\\PkgStore\\MW_EXT_Src::onBeforePageDisplay"
+    ]
+  },
+  "MessagesDirs": {
+    "MW_EXT_Src": [
+      "i18n"
+    ]
+  },
+  "ResourceModules": {
+    "ext.mw.src": {
+      "scripts": [
+        "scripts/prism.min.js",
+        "scripts/main.min.js"
+      ],
+      "position": "bottom",
+      "targets": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    "ext.mw.src.styles": {
+      "styles": [
+        "styles/theme.css"
+      ],
+      "position": "top",
+      "targets": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "modules",
+    "remoteExtPath": "MW_EXT_Src/modules"
+  },
+  "manifest_version": 2
+}
